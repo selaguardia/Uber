@@ -39,6 +39,9 @@ Instructions:
 3) Enter your destination
 4) Select your ride (highlights your choice and makes 'Choose' button clickable with your current choice.)
 
+![image](assets/previewOne.JPG)
+![image](assets/previewTwo.JPG)
+
 
 
 
