@@ -26,7 +26,7 @@ const data = [
     id: "789",
     icon: "time-outline",
     location: "Recent",
-    destination: "6889 Devon Way, Berkeley, CA",
+    destination: "2036 University Ave, Berkeley, CA",
   },
 ];
 

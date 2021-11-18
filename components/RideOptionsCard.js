@@ -35,6 +35,8 @@ const data = [
   },
 ];
 
+const SURGE_CHARGE_RATE = 1.5;
+
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
@@ -49,7 +51,7 @@ const RideOptionsCard = () => {
         >
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
-        <Text style={tw`text-center py-3 text-xl`}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
+        <Text style={tw`text-center py-3 text-xl`}>Select a Ride - {travelTimeInformation?.distance?.text}</Text>
       </View>
       <FlatList
         data={data}
@@ -68,13 +70,22 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration.text} travel time</Text>
+              <Text>{travelTimeInformation?.duration?.text} travel time</Text>
             </View>
-            <Text style={tw`text-xl`}>$30</Text>
+            <Text style={tw`text-xl`}>
+              {new Intl.NumberFormat('en-us', {
+                style: 'currency',
+                currency: 'USD',
+              }).format(
+                (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE
+                  * multiplier) / 100
+              )
+              }
+            </Text>
           </TouchableOpacity>
         )}
       />
-      <View>
+      <View style={tw`mt-auto border-t border-gray-200`}>
         <TouchableOpacity 
           disabled={!selected}
           style={tw`bg-black py-3 mx-5 rounded-full ${!selected && "bg-gray-300"}`}>
