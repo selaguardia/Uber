@@ -1,6 +1,6 @@
 🖥 Link to hosted app:
 
-https://.herokuapp.com/
+https://expo.dev/@sergiolaguardia/uber-clone
 
 ✏️ Description:
 
