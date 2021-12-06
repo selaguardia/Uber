@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Using React Native, I built an Uber clone application. \nUtilized Google API's including Places, Directions, and Distance Matrix to calculate travel time, distance, cost, and real navigation.",
+    "githubUrl": "https://github.com/selaguardia/Uber"
   }
 }

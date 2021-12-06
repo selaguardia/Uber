@@ -18,6 +18,7 @@ Front-End:
   - Tailwind CSS
 
 Back-End:
+  - Node.js
   - Expo
   - Google API's
 
